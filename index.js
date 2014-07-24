@@ -742,7 +742,7 @@ Pivotal.apiCall = function (method, pathSegments, query, data, file, cb, token) 
     }
 
     // Build Request URL
-    var path        =  "/services/v3/" + pathSegments.join("/"),
+    var path        =  "/services/v" + Pivotal.apiVersion + "/" + pathSegments.join("/"),
         postData     = null,
         options     = null,
         req         = null,
